@@ -1,0 +1,356 @@
+:root /*declarer des variables pour toute la page*/
+{
+    --main-purple:#52508e;
+    --tips-background:#81809e;
+    --main-wood:#574a3e6e;
+    --main-white-wood:hsla(32, 21%, 64%, 0.582);
+    --main-raduis: 100px;
+    
+}
+
+@media screen /*Pour les grands écrans*/
+{
+    li
+    {
+        margin: 25px 0;/*Permet l'espacement entre les points de la liste*/
+    }
+
+    .ing
+    {
+        margin: 0px;
+    }
+
+    body
+    {
+        background-color: hsl(240, 100%, 97%);
+    }
+
+    #logogramme_home
+    {   
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 0 var(--main-raduis) var(--main-raduis);
+    }
+
+    #logogramme_home,#title_news,footer,#contact
+    {   
+        display: flex;
+    }
+
+    #alphabet,#news1,#news2,#recipe
+    {
+        padding: 40px;
+    }
+
+    #logogramme_home,footer,#contact
+    {   
+        background-color: var(--main-purple);
+    }
+
+    .logo_home
+    {
+        padding: 10px;
+    }
+
+    #container_news,#alphabet,#recipe
+    {
+        display: grid;
+    }
+
+    #alphabet
+    {
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(5,fit-content);
+        margin-bottom: 60px;
+        list-style-position: inside;/*Change le retrait des puces*/
+        font-size: 40px;
+    }
+
+    .letter,#quantity,#time,#ingredients_title,#preparation_title
+    {
+        font-weight: bolder;
+    }
+
+    #container_news
+    {
+        grid-template-areas:"actu actu"
+                            "news1 news2";
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    #title_news
+    {
+        grid-area: actu;
+        background-color: var(--main-white-wood);
+        border-radius: var(--main-raduis);
+        font-size: 30px;
+        justify-content: center;
+        align-content: flex-start;
+        margin: -50px 10px -300px 10px;
+    }
+
+    #news1,#news2
+    {
+        grid-area: news1;
+        background-color: var(--main-wood);
+        border-radius: var(--main-raduis);
+        margin: 40px;
+    }
+
+    #news2{grid-area: news2;}
+
+    footer,#contact,a,h1,#tips
+    {
+        text-decoration-line: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #alphabet,#title_news,#news1,#news2,#ingerdients,#preparation
+    {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #alphabet,h1,#title_news,#ingredients_title,#preparation_title
+    {
+        text-shadow: 2px 3px 2px white;
+    }
+
+    #alphabet,h1,#title_news,a,#quantity,#time,#ingredients_title,#preparation_title,#ingredients_list,#preparation_steps
+    {
+        color:var(--main-purple);
+    }
+
+    footer,#contact
+    {
+        color: white;
+    }
+
+    #news1,#news2,#tips
+    {
+        color: black;
+    }
+
+    h1
+    {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    a,#ingredients_list
+    {
+       font-size: 20px; 
+    }
+
+    a
+    {
+        text-decoration-line: none;
+    }
+
+    footer,#contact
+    {
+        padding: 20px;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: var(--main-raduis) var(--main-raduis) 0 0;
+        font-size: 15px;
+    }
+
+    #recipe
+    {
+        grid-template-areas: "nb_personne nb_personne temps temps"
+                            "preparation preparation ingredients ingredients"
+                            "astuce astuce astuce astuce";
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3, fit-content);
+    }
+
+    #time,#ingredients,#tips
+    {
+        margin-right: 20%;
+    }
+
+    #quantity,#preparation,#tips
+    {
+        margin-left: 20%;
+    }
+
+    #quantity
+    {
+        grid-area: nb_personne;
+        place-self: center center;
+        font-size: 22px;
+    }
+
+    #time
+    {
+        grid-area: temps;
+        place-items: center center;
+        font-size: 18px;
+    }
+
+    #ingredients
+    {
+        grid-area: ingredients;
+        place-self: stretch center;
+        padding-bottom: 40px;
+    }
+
+    #ingredients_title
+    {
+        font-size: 35px;
+    }
+
+    #preparation
+    {
+        grid-area: preparation;
+        place-self: stretch center;
+        padding-bottom: 40px;
+    }
+
+    #preparation_title
+    {
+        font-size: 35px;
+    }
+
+    #ingredients_list
+    {
+        list-style-image: url(bullet1.png); 
+    }
+
+    #preparation_steps
+    {
+        font-size: 21px;
+    }
+
+    #preparation_steps,#tips,#ingredients_list
+    {
+        text-align: justify;
+    }
+    #tips
+    {
+        grid-area: astuce;
+        background-color: var(--tips-background);
+        border-radius: var(--main-raduis);
+        place-items: center center;
+        padding: 2% 5% 5% 5%;
+    }
+}
+
+@media (max-width:1180px)/*Pour les petits écrans (vérification sur telephone à faire)*/
+{
+    #alphabet
+    {
+        display: block;
+        margin-bottom: 60px;
+        list-style-position: inside;
+        font-size: 40px;
+    }
+
+    #container_news
+    {
+        display: grid;
+        grid-template-areas:"actu"
+                            "news1" 
+                            "news2";
+        grid-template-columns: 1fr;
+        grid-row-gap: 0px;
+    }
+
+        #title_news
+    {
+        margin: 0px;
+    }
+
+        footer,#contact
+    {
+        font-size: 10px;
+    }
+    
+    #recipe
+    {
+        display: block;/*Remet la recette en bas des ingredients*/
+    }
+
+    #quantity
+    {
+        margin: 0px 0px 25px 0px;
+    }
+
+    #preparation,#tips
+    {
+        margin: 0px 0px 0px 0px;
+    }
+
+    #tips
+    {
+        padding: 5% 10% 10% 10%;
+    }
+}
+
+@media print/*Pour imprimer, des modifications se font automatiquement par les navigateurs*/
+{
+    body
+    {
+        background-color: white;
+        color: black;
+        margin-top: -130px;/*Remonte le body pour supprimer l'espace vide en haut de la page*/
+    }
+    
+    h1 
+    {
+        font-size: 50px;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    #preparation_steps
+    {
+        line-height: -30px;/*Taille de l'interligne*/
+    }
+
+    #recipe
+    {
+        display: grid;
+        grid-template-areas: "nb_personne temps"
+                            "ingredients."
+                            "preparation."
+                            "tips .";
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4, min-content);
+    }
+
+    footer,header
+    {
+        visibility: collapse;/*Retire le footer et header à l'impression*/
+    }
+
+    #preparation,#ingredients,#tips
+    {
+        grid-column: 1/-1;/*Fusion de la ligne*/
+    }
+
+    #tips
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #quantity,#time,#ingredients_list,#preparation_steps
+    {
+        font-size: 12pt;
+    }
+
+    li
+    {
+        margin: 15px 0;
+    }
+
+    .ing
+    {
+        margin: 0px;
+    }
+}
+
