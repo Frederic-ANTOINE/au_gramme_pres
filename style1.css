@@ -10,6 +10,11 @@
 
 @media screen /*Pour les grands écrans*/
 {
+    .jump
+    {
+        text-decoration-line: underline;
+    }
+
     li
     {
         margin: 25px 0;/*Permet l'espacement entre les points de la liste*/
