@@ -10,9 +10,23 @@
 
 @media screen /*Pour les grands écrans*/
 {
+    .jump
+    {
+        text-decoration-line: underline;
+        font-size: 12pt;
+    }
+
+    .recipe_link
+    {
+        list-style-position: outside;
+        list-style-type: none;
+        line-height: 13px;
+    
+    }
+
     li
     {
-        margin: 25px 0;/*Permet l'espacement entre les points de la liste*/
+        margin: 25px 10px 25px 10px;/*Permet l'espacement entre les points de la liste*/
     }
 
     .ing
