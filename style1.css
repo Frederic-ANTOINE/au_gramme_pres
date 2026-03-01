@@ -13,6 +13,7 @@
     .jump
     {
         text-decoration-line: underline;
+<<<<<<< HEAD
         font-size: 12pt;
     }
 
@@ -22,6 +23,8 @@
         list-style-type: none;
         line-height: 13px;
     
+=======
+>>>>>>> c3b659f732ea12e4adae4eb8e067fe9b4ead9f0e
     }
 
     li
